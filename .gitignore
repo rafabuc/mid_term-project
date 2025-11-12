@@ -88,6 +88,6 @@ artifacts_v2/feature_extractor/features/X_train.npy
 /artifacts
 /artifacts_v2
 .dvc/**
-artifacts.dvc
-artifacts_v2.dvc
-datasets.dvc
+#artifacts.dvc
+#artifacts_v2.dvc
+#datasets.dvc
