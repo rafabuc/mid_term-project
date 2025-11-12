@@ -1,0 +1,84 @@
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+
+install_k8s.txt
+# Archivos de caché y optimización de Python
+# ----------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Directorios de entornos virtuales
+# ----------------------------------------------------
+# Ignora el entorno virtual típico de Python
+venv/
+.venv/
+env/
+
+# Entornos específicos 
+.conda/
+.micromamba/
+# Si usas poetry, ignora sus carpetas de cache
+.poetry/
+
+
+# Archivos de Jupyter Notebook y IPython
+# ----------------------------------------------------
+# Puntos de control automáticos (muy importantes de ignorar)
+# Archivos de datos de IPython
+profile_default/
+ipython_config.py
+
+# Archivos del IDE (Ignora los archivos de configuración de tu editor)
+# ----------------------------------------------------
+# Visual Studio Code
+.vscode/
+# PyCharm / IntelliJ
+.idea/
+# Spyder (u otros IDEs)
+.spyderproject
+.spyderprojects
+
+
+# ----------------------------------------------------
+
+#data/
+#output/
+#results/
+#temp/
+#tmp/
+#*.csv
+#*.xls
+#*.xlsx
+#*.pkl
+#*.parquet
+#*.json
+#*.sqlite
+
+# Archivos de logs
+# ----------------------------------------------------
+*.log
+nohup.out
+
+# Archivos del SO / Varios
+# ----------------------------------------------------
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# Archivos de cobertura de pruebas
+# ----------------------------------------------------
+.coverage
+htmlcov/
+.pytest_cache/
+
+minikube-linux-amd64
+kubectl
+ignore/**
+
+artifacts/**
+datasets/**
+artifacts_v2/**

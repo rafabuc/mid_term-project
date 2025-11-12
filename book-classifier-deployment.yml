@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-classifier-deployment
+  labels:
+    app: book-classifier
+spec:
+  replicas: 2 # Número de pods
+  selector:
+    matchLabels:
+      app: book-classifier
+  template:
+    metadata:
+      labels:
+        app: book-classifier
+    spec:
+      containers:
+      - name: book-classifier-api
+        image: book-classifier-api:v2
+        imagePullPolicy: Never # Importante: usa imagen local
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "500m"
+        env:
+        - name: PYTHONUNBUFFERED
+          value: "1"
+        - name: TZ
+          value: "America/Mexico_City"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 5

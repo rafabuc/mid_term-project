@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-classifier-service
+  labels:
+    app: book-classifier
+spec:
+  type: NodePort # Para acceso local
+  selector:
+    app: book-classifier
+  ports:
+  - protocol: TCP
+    port: 8000 # Puerto del Service
+    targetPort: 8000 # Puerto del container
+    nodePort: 30080 # Puerto expuesto (30000-32767)

@@ -1,0 +1,26 @@
+name: mid-term-project
+dependencies:
+- python=3.13.5
+- numpy
+- pandas
+- matplotlib
+- scikit-learn
+- pip
+- seaborn
+- jupyter
+- scipy
+- xgboost
+- lightgbm
+- imbalanced-learn
+- nltk
+- python-dotenv
+- matplotlib
+- seaborn
+- tqdm
+- requests
+- pip:
+  - requests
+  - flask
+  - flask-cors
+  - gunicorn
+  - pydantic

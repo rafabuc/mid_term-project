@@ -1,0 +1,52 @@
+TRAIN_FILE = 'train_metadata.csv'
+TEST_FILE = 'test_metadata.csv'
+INFO_FILE = 'split_info.json'
+
+
+PATH_ARTIFACTS = './artifacts/'
+SAMPLE_METADATA_FILE=f'{PATH_ARTIFACTS}/dataset/sampled_metadata.csv'
+CLASS_WEIGHTS_FILE=f'{PATH_ARTIFACTS}/dataset/class_weights.json'
+CLASS_AGRESSIVE_WEIGHTS_FILE=f'{PATH_ARTIFACTS}/dataset/class_weights_aggressive.json'
+
+PATH_DATASETS = './datasets/'
+PATH_ARTIFACTS = './artifacts/'
+
+FEATURE_EXTRACTOR_OUTPUT_DIR = f'{PATH_ARTIFACTS}/feature_extractor/'#pkl
+FEATURE_EXTRACTOR_FEATURES_OUTPUT_DIR = f'{FEATURE_EXTRACTOR_OUTPUT_DIR}/features'
+MODEL_OUTPUT_DIR = f'{PATH_ARTIFACTS}/models/'
+
+X_TRAIN_FILE = f'{FEATURE_EXTRACTOR_FEATURES_OUTPUT_DIR}/X_train.npy'
+Y_TRAIN_FILE = f'{FEATURE_EXTRACTOR_FEATURES_OUTPUT_DIR}/y_train.npy'
+X_TEST_FILE = f'{FEATURE_EXTRACTOR_FEATURES_OUTPUT_DIR}/X_test.npy'
+Y_TEST_FILE = f'{FEATURE_EXTRACTOR_FEATURES_OUTPUT_DIR}/y_test.npy'
+
+
+CLASS_NAMES_FILE = f'{FEATURE_EXTRACTOR_FEATURES_OUTPUT_DIR}/class_names.json'
+FEATURE_NAMES_FILE = f'{FEATURE_EXTRACTOR_FEATURES_OUTPUT_DIR}/feature_names.json'
+
+
+REPORTS_DIR = f'{PATH_ARTIFACTS}/reports/'
+REPORT_XGBOOST_CONFUSION_MATRIX_FILE = f'{REPORTS_DIR}/xgboost_confusion_matrix.png'
+REPORT_XGBOOST_FEATURE_IMPORTANCE_FILE = f'{REPORTS_DIR}/xgboost_feature_importance.png'
+REPORT_XGBOOST_CLASSIFICATION_REPORT_FILE = f'{REPORTS_DIR}/xgboost_classification_report.txt'
+REPORT_XGBOOST_MODEL_FILE = f'{MODEL_OUTPUT_DIR}/xgboost_model.pkl'
+REPORT_XGBOOST_METRICS_FILE = f'{REPORTS_DIR}/xgboost_metrics.json'
+
+REPORT_LOGREG_CONFUSION_MATRIX_FILE=f'{REPORTS_DIR}/logreg_confusion_matrix.png'
+REPORT_LOGREG_COEFFICIENTS_FILE=f'{REPORTS_DIR}/logreg_coefficients_'
+REPORT_LOGREG_CLASSIFICATION_REPORT_FILE=f'{REPORTS_DIR}/logreg_classification_report.txt'
+REPORT_LOGREG_MODEL_FILE=f'{MODEL_OUTPUT_DIR}/logreg_model.pkl'
+REPORT_LOGREG_METRICS_FILE=f'{REPORTS_DIR}/logreg_metrics.json'
+REPORT_MODEL_COMPARISON=f'{REPORTS_DIR}/model_comparison.csv'
+BEST_MODEL_FILE=f'{MODEL_OUTPUT_DIR}/best_model.pkl'
+TARGET_COLUMN = 'main_category'
+
+TARGET_COLUMN_CATEGORY_LEVEL2 = 'category_level_2_sub'
+
+
+REPORTS_DIR_V2 = f'{PATH_ARTIFACTS}/reports/v2_agressive_weights/'
+REPORT_XGBOOST_CONFUSION_MATRIX_FILE_V2 = f'{REPORTS_DIR_V2}/xgboost_confusion_matrix.png'
+REPORT_XGBOOST_FEATURE_IMPORTANCE_FILE_V2 = f'{REPORTS_DIR_V2}/xgboost_feature_importance.png'
+REPORT_XGBOOST_CLASSIFICATION_REPORT_FILE_V2 = f'{REPORTS_DIR_V2}/xgboost_classification_report.txt'
+REPORT_XGBOOST_MODEL_FILE_V2 = f'{REPORTS_DIR_V2}/xgboost_model.pkl'
+REPORT_XGBOOST_METRICS_FILE_V2 = f'{REPORTS_DIR_V2}/xgboost_metrics.json'
