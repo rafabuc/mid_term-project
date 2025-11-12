@@ -459,7 +459,7 @@ book-classifier/
 Python 3.13+
 Docker 27.3.1+
 8GB RAM minimum
-5GB disk space for model artifacts
+2GB disk space for model artifacts
 ```
 
 ### Installation
@@ -480,6 +480,61 @@ pip install -r requirements.txt
 # Place artifacts in ./artifacts_v2/ directory
 ```
 
+## 📦 Download Datasets and Artifacts
+
+This project uses DVC (Data Version Control) to manage large datasets and artifacts that cannot be stored directly on GitHub.
+
+### Prerequisites
+```bash
+pip install dvc[s3]
+```
+
+### Setup and Download
+
+1. **Configure DVC remote:**
+```bash
+dvc remote add -d artifacts_remote s3://q-reg/artifacts
+```
+
+2. **Configure anonymous access (public bucket):**
+```bash
+dvc remote modify artifacts_remote anon true
+```
+
+3. **Download the data:**
+```bash
+# Download all files
+dvc pull
+
+# Or download specific files
+dvc pull datasets.dvc
+dvc pull artifacts_v2.dvc
+dvc pull artifacts.dvc
+```
+
+### Data Structure
+
+After running `dvc pull`, you will have:
+```
+.
+├── datasets/              # Original datasets (~547 MB)
+│   ├── amazon_books_metadata_sample_20k.csv
+│   └── amazon_books_reviews_sample_20k.csv
+├── artifacts/             # Model artifacts v1
+│   ├── dataset/
+│   └── feature_extractor/
+└── artifacts_v2/          # Model artifacts v2
+    ├── dataset/
+    └── feature_extractor/
+```
+
+> **Note:** Download may take several minutes depending on your connection (total ~800 MB).
+
+📋 **For complete artifacts structure details**, see [docs/visual_pipeline.md](visual_pipeline.md) - **Phase 6: Model Persistence** section.
+
+
+
+
 ### Training (Optional)
 
 ```bash
@@ -487,6 +542,7 @@ pip install -r requirements.txt
 jupyter lab notebooks/books_notebook_subcategories_v2.ipynb
 
 ```
+
 
 ### Local API Deployment
 

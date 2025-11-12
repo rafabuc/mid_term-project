@@ -1,0 +1,4 @@
+[core]
+    remote = artifacts_remote
+['remote "artifacts_remote"']
+    url = s3://q-reg/artifacts

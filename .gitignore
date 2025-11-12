@@ -84,3 +84,10 @@ datasets/**
 artifacts_v2/**
 
 artifacts_v2/feature_extractor/features/X_train.npy
+/datasets
+/artifacts
+/artifacts_v2
+.dvc/**
+artifacts.dvc
+artifacts_v2.dvc
+datasets.dvc
