@@ -530,8 +530,7 @@ After running `dvc pull`, you will have:
 
 > **Note:** Download may take several minutes depending on your connection (total ~800 MB).
 
-📋 **For complete artifacts structure details**, see [docs/visual_pipeline.md](visual_pipeline.md) - **Phase 6: Model Persistence** section.
-
+📋 **For complete artifacts structure details**, see  **Project Structure** section.
 
 
 
