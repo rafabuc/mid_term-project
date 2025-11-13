@@ -551,7 +551,7 @@ python api.py
 
 # Option 2: Docker
 docker build -t book-classifier:v2 -f deployment/Dockerfile .
-docker run -p 8005:8005 book-classifier:v2
+docker run -p 8000:8000 book-classifier:v2
 
 
 ```
@@ -623,11 +623,6 @@ Predict book category
 }
 ```
 
-### Interactive Documentation
-
-Once the API is running, access:
-- Swagger UI: http://localhost:8005/docs
-- ReDoc: http://localhost:8005/redoc
 
 ---
 
@@ -644,7 +639,7 @@ docker build -t book-classifier:v2 -f Dockerfile ..
 
 ```bash
 docker run -d \
-  -p 8005:8005 \
+  -p 8000:8000 \
   --name book-classifier \
   book-classifier:v2
 ```
@@ -676,7 +671,7 @@ kubectl logs -f deployment/book-classifier
 kubectl get service book-classifier
 
 # Port forward (for testing)
-kubectl port-forward service/book-classifier 8005:8005
+kubectl port-forward service/book-classifier 8000:8000
 ```
 
 ### Scale Deployment
@@ -831,7 +826,7 @@ pytest test_api_client.py
 
 ## 👥 Contributing
 
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting PRs.
+Contributions are welcome! 
 
 
 
