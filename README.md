@@ -540,7 +540,17 @@ After running `dvc pull`, you will have:
 # Run the complete training pipeline
 jupyter lab notebooks/books_notebook_subcategories_v2.ipynb
 
+# Run train script
+  pythons train.py
 ```
+
+**Note** Before running the script, make sure you have downloaded the Amazon dataset to ./dataset.  
+  ├── datasets/              # Original datasets (~547 MB)
+  │   ├── amazon_books_metadata_sample_20k.csv
+  │   └── amazon_books_reviews_sample_20k.csv
+
+Rename the artifactsv2 folder (if you also downloaded it) as it will be created and linked during the training process.
+Script ejecution time  ~70 minutes
 
 
 ### Local API Deployment
