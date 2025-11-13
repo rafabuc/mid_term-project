@@ -349,11 +349,11 @@ Switched to **gradient boosting (XGBoost)** which improved performance:
 ### Core ML Libraries
 ```python
 Python 3.13.0
-├─ pandas 2.2.2          # Data manipulation
-├─ numpy 1.26.4          # Numerical computing
+├─ pandas 2.3.3          # Data manipulation
+├─ numpy 2.3.4          # Numerical computing
 ├─ scikit-learn 1.5.2    # Feature extraction, preprocessing
-├─ xgboost 2.1.2         # Gradient boosting classifier
-└─ joblib 1.4.2          # Model serialization
+├─ xgboost 3.0.1         # Gradient boosting classifier
+└─ joblib 1.5.2          # Model serialization
 ```
 
 ### Deployment Stack
@@ -361,10 +361,10 @@ Python 3.13.0
 FastAPI 0.115.0          # REST API framework
 ├─ uvicorn 0.32.0        # ASGI server
 ├─ pydantic 2.9.2        # Data validation
-└─ python-multipart      # File uploads
+└─ 
 
-Docker 27.3.1            # Containerization
-Kubernetes 1.31          # Orchestration
+Docker 28.5.1               # Containerization
+minikube version: v1.37.0   # Orchestration
 ```
 
 ### Development Tools
@@ -570,7 +570,14 @@ curl -X POST "http://localhost:8000/predict" \
   -d "rating=4.5" \
   -d "rating_count=5000" \
   -d "book_format=Paperback"
+
+# Test API endpoints
+python test_api_client.py
+
 ```
+
+
+
 
 ---
 
@@ -696,7 +703,7 @@ kubectl autoscale deployment book-classifier \
 
 ```bash
 # Test API endpoints
-pytest test_api_client.py
+python test_api_client.py
 
 ```
 
