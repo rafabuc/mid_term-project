@@ -2,10 +2,8 @@
 STEP 3: FEATURE EXTRACTION - COMPLETE EXECUTION & SAVE
 =======================================================
 
-This script executes the complete Step 3 pipeline:
-1. Load train_metadata.csv and test_metadata.csv
-2. Apply FeatureExtractor to generate features
-3. Save all outputs needed for Step 4 (Model Training)
+
+Save all outputs needed for Step 4 (Model Training)
 
 Outputs:
 - data/features/X_train.npy
