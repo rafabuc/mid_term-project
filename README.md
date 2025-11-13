@@ -417,11 +417,11 @@ book-classifier/
 │       ├── xgboost_metrics.json
 │       └── model_comparison.csv
 │
-├── notebooks/
+├── /
 │   ├── books_notebook_subcategories_v1.ipynb  # Logistic Regressionn and XGBoost (deprecated)
 │   └── books_notebook_subcategories_v2.ipynb  # XGBoost (current)
 │
-├── src/
+├── /
 │   ├── data_loader.py              # Data loading utilities
 │   ├── data_preprocessor.py        # Data preprocessing
 │   ├── feature_extractor.py        # Feature extraction
@@ -429,23 +429,23 @@ book-classifier/
 │   ├── book_classifier.py          # Classifier wrapper
 │   └── constants_v2.py             # Configuration constants
 │
-├── deployment/
+├── /
 │   ├── api.py                            # FastAPI application
 │   ├── Dockerfile                        # Docker configuration
 │   ├── book-classifier-deployment.yaml   # Kubernetes manifests
 │   ├── book-classifier-service.yaml      # Kubernetes manifests
 │   └── requirements.txt                  # Python dependencies
 │
-├── tests/
-│   ├── test_api.py                 # API tests
-│   └── test_classifier.py          # Classifier tests
+├── /
+│   ├── test_api_client.py                 # API tests
+│   └── 
 │
 ├── docs/
 │   ├── README.md                   # This file
 │   ├── VISUAL_PIPELINE.md          # Visual pipeline documentation
 │   └── docker-k8s-test.docx        # Console logs for docker and k8s deployments
 ├── requirements.txt                # Production dependencies
-├── requirements-dev.txt            # Development dependencies
+├── 
 └── .gitignore
 ```
 
@@ -466,7 +466,7 @@ Docker 27.3.1+
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/your-repo/book-classifier.git
+git clone https://github.com/rafabuc/mid_term-project.git
 cd book-classifier
 
 # 2. Create virtual environment
